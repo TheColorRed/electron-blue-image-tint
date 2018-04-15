@@ -1,0 +1,14 @@
+{
+    "name": "electron-image-paste-test",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "./node_modules/.bin/electron ./index.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "electron": "^1.8.4"
+    }
+}
