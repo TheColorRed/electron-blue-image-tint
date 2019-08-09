@@ -8,5 +8,6 @@ ipcRenderer.addListener('paste-image', (e, img, size) => {
   document.body.appendChild(canvas)
 
   let data = new ImageData(new Uint8ClampedArray(img), size.width, size.height)
+  console.log(data)
   ctx.putImageData(data, 0, 0)
 })

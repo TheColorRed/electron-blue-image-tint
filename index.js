@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain, WebContents, clipboard, ipcRenderer, Menu, nativeImage } = require('electron')
+const { app, BrowserWindow, clipboard, Menu } = require('electron')
 const path = require('path')
 
 let mainWindow = null
@@ -8,10 +8,13 @@ const createWindow = () => {
   mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
-    show: false
+    show: false,
+    webPreferences: {
+      nodeIntegration: true
+    }
   })
 
-  let views = path.join(__dirname, '../../views')
+  // let views = path.join(__dirname, '../../views')
   global.web = mainWindow.webContents
   mainWindow.loadURL(`file://${path.join(__dirname, 'index.html')}`)
 
